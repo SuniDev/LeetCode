@@ -10,14 +10,14 @@
  */
 class Solution {
     func middleNode(_ head: ListNode?) -> ListNode? {
-        var middle: ListNode? = head
-        var end: ListNode? = head
-
-        while (end?.next != nil) {
-            middle = middle?.next
-            end = end?.next?.next
+        var array: [ListNode?] = []
+        var node: ListNode? = head
+        
+        while(node != nil) {
+            array.append(node)
+            node = node?.next
         }
-
-        return middle
+        
+        return array[array.count/2]
     }
 }
