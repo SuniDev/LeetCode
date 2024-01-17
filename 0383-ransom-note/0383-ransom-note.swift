@@ -1,10 +1,10 @@
 class Solution {
     func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
-        var magazineCapy = magazine
+        var copy = magazine
 
         for letter in ransomNote {
-            if let index = magazineCapy.firstIndex(of: letter) {
-                magazineCapy.remove(at: index)
+            if let index = copy.firstIndex(of: letter) {
+                copy.remove(at: index)
             } else {
                 return false
             }
